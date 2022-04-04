@@ -1,0 +1,103 @@
+body{
+    background-color: #ddd;
+    margin: 0px;
+    padding: 0px;
+
+    --primary-color: #0fb94d;
+    --text-dark-color: #555;
+    --text-light-color: #fff;
+}
+
+$primaryColor : #0fb94d;
+
+.container-wrapper{
+    width: 1200px;
+    max-width: 100%;
+    display: block;
+    margin: 0px auto;
+    background-color: white;
+    min-height: 100vh;
+    padding: 15px 15px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.mt-2{
+    margin-top: 10px;
+}
+
+
+//Tags Input Design Starts
+.tags-container-wrapper{
+    display: block;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags-input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.tags-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-node{
+    display: inline-block;
+    margin: auto 0px;
+    padding: 4px;
+}
+
+.tag-node-wrapper{
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--text-light-color);
+    padding-left: 5px;
+    border-radius: 5px;
+    margin: 2px;
+    flex-wrap: nowrap;
+    order: -1;
+}
+
+.remove-tag{
+    display: inline-block;
+    padding: 0px 5px;
+    margin: auto 0px;
+    cursor: pointer;
+    
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    svg{
+        height: 100%;
+    }
+
+    &:hover{
+        background-color: darken($primaryColor, 10);
+    }
+}
+
+.input-container{
+    display: inline-block;
+    margin: auto 0px;
+    position: relative;
+    
+
+    .error-box{
+        display: none;
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 2px;
+        color: red;
+        font-size: 12px;
+
+    }
+}
